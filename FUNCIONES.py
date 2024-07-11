@@ -1,5 +1,5 @@
 import random,csv
-trabajadores = ("Juan Pérez","María García","Carlos López","Ana Martínez","Pedro Rodríguez","Laura Hernández","Miguel Sánchez","Isabel Gómez","Francisco Díaz","Elena Fernández")
+trabajadores = ["Juan Pérez","María García","Carlos López","Ana Martínez","Pedro Rodríguez","Laura Hernández","Miguel Sánchez","Isabel Gómez","Francisco Díaz","Elena Fernández"]
 sueldos=[]
 def asignar_sueldo():
     print("\tASIGNAR SUELDOS")
@@ -18,25 +18,25 @@ def clasificar_sueldos():
             print("NO EXCISTEN SUELDOS PARA LOS TRABAJADORES...INGRESE SUELDOS CON LA OPCIÓN 1")
             return
         else:
-                for s in sueldos:
-                        for T in trabajadores:
-                            print ("Trabajador:",T,"\tSueldo",s)
-                        if s <= 800000:
-                            print ("Sueldos menores a $800.000 TOTAL",total)
-                            total = total +1
-                        elif s == 800000 and s >=2000000:
-                            print("Sueldos entre $800.000 y $2.000.000 TOTAL:",total)
-                            print ("Trabajador:",T,"\tSueldo: ",s)
-                            total = total +1
-                        elif s >= 2000000:
-                            print("Sueldos superiores a $2.000.000 TOTAL:",total)
-                            print ("Trabajador:",T,"\tSueldo: ",s)
-                            total = total +1
-                            TOTAL_SUELDOS= sueldos * total
-                            print ("TOTAL SUELDOS:",TOTAL_SUELDOS)
-                            break
-                        elif s == 0:
-                            print("NO EXISTE TRABAJADOR CON ESE SUELDO")
+            for s in sueldos:
+                    for T in trabajadores:
+                        print ("Trabajador:",T,"\tSueldo",s)
+                    if s <= 800000:
+                        print ("Sueldos menores a $800.000 TOTAL",total)
+                        total = total +1
+                    elif s == 800000 and s >=2000000:
+                        print("Sueldos entre $800.000 y $2.000.000 TOTAL:",total)
+                        print ("Trabajador:",T,"\tSueldo: ",s)
+                        total = total +1
+                    elif s >= 2000000:
+                        print("Sueldos superiores a $2.000.000 TOTAL:",total)
+                        print ("Trabajador:",T,"\tSueldo: ",s)
+                        total = total +1
+                        TOTAL_SUELDOS= sueldos * total
+                        print ("TOTAL SUELDOS:",TOTAL_SUELDOS)
+                        break
+                    elif s == 0:
+                        print("NO EXISTE TRABAJADOR CON ESE SUELDO")
                 
                     
 def ver_estadisticas():
